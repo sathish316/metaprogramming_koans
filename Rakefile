@@ -24,6 +24,7 @@ module Koans
     line = line.gsub(/assert_equal [\:"']?([\w\s\!']+)['"]?,/, "assert_equal __,")
     line = line.gsub(/assert_match \/(.*?)\//, "assert_match /__/")
     line = line.gsub(/assert_raises(\w+)\//, "assert_raises(___)")
+    line = line[line.index('#Write code here'), line.length] if line =~ /#Write code here/
     line
   end
 

@@ -58,16 +58,14 @@ class AboutDefineMethod < EdgeCase::Koan
     def my_writer(name)
       ivar_name = "@#{name}"
       define_method "#{name}=" do |value|
-        #Write code here to set value of ivar
-        instance_variable_set(ivar_name, value)
+        instance_variable_set(ivar_name, value) #Write code here to set value of ivar
       end
     end
     
     def my_reader(name)
       ivar_name = "@#{name}"
-      define_method name do 
-        #Write code here to get value of ivar
-        instance_variable_get(ivar_name)
+      define_method name do
+        instance_variable_get(ivar_name) #Write code here to get value of ivar
       end
     end
   end
