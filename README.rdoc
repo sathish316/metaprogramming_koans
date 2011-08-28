@@ -1,146 +1,90 @@
-= EdgeCase Ruby Koans
+= Ruby Metaprogramming Koans
 
-The Ruby Koans walk you along the path to enlightenment in order to learn Ruby.
-The goal is to learn the Ruby language, syntax, structure, and some common
-functions and libraries. We also teach you culture. Testing is not just something we
-pay lip service to, but something we live.  It is essential in your quest to learn
-and do great things in the language.
+Ruby Metaprogramming Koans walk you along the path to enlightenment in order to learn Metaprogramming in Ruby.
+It is inspired by the original Ruby koans(http://rubykoans.com) by Jim Weirich which can be forked here: https://github.com/edgecase/ruby_koans
+
+Koans teach you a programming language using Tests/TDD.
+Ruby programming attempts to teach Ruby metaprogramming using the same philosophy of koans used for programming languages.
+
+== Metaprogramming examples
+
+The metaprogramming examples used in the koans are derived from the following sources:
+
+# Seeing Metaclasses clearly by _why (http://dannytatom.github.com/metaid/)
+# Ruby Object model and Metaprogramming by Dave Thomas (http://pragprog.com/screencasts/v-dtrubyom/the-ruby-object-model-and-metaprogramming)
+
+The koans are a starting point and only supplement the above articles/books/videos.
+Please use the original source for more enlightenment.
 
 == The Structure
 
-The koans are broken out into areas by file, hashes are covered in about_hashes.rb,
-modules are introduced in about_modules.rb, etc.  They are presented in order in the
+The koans are broken out into areas by file, metaclasses are covered in about_metaclasses.rb,
+define_method is covered in about_define_method.rb, etc. They are presented in order in the
 path_to_enlightenment.rb file.
 
-Each koan builds up your knowledge of Ruby and builds upon itself.  It will stop at
-the first place you need to correct.
-
-Some koans simply need to have the correct answer substituted for an incorrect one.
-Some, however, require you to supply your own answer.  If you see the method +__+ (a
-double underscore) listed, it is a hint to you to supply your own code in order to
-make it work correctly.
+Each koan builds up your knowledge of Ruby metaprogramming and builds upon itself. Koans will
+have __ or ___ which you need to fill in with the correct answer to progress.
 
 == Installing Ruby
 
-If you do not have Ruby setup, please visit http://ruby-lang.org/en/downloads/ for
-operating specific instructions.  In order to run this you need ruby and rake
-installed. To check the installations simply type:
+The koans require Ruby 1.9.2. To install Ruby:
 
-*nix platforms from any terminal window:
+# Install RVM (http://beginrescueend.com/rvm/install/)
+# Install Ruby (http://beginrescueend.com/rvm/install/)
 
-   [~] $ ruby --version
-   [~] $ rake --version
+$ rvm install ruby-1.9.2
 
-Windows from the command prompt (cmd.exe)
-
-   c:\ruby --version
-   c:\rake --version
-
-If you don't have rake installed, just run `gem install rake`
-
-Any response for Ruby with a version number greater than 1.8 is fine (should be
-around 1.8.6 or more). Any version of rake will do.
+All the koans are in Test::Unit and don't require additional gems
 
 == The Path To Enlightenment
 
-You can run the tests through rake or by calling the file itself (rake is the
-recommended way to run them as we might build more functionality into this task).
+To start working your way through the koans, run rake
 
-*nix platforms, from the koans directory
+metaprogramming_koans$ rake
 
-    [ruby_koans] $ rake                           # runs the default target :walk_the_path
-    [ruby_koans] $ ruby path_to_enlightenment.rb  # simply call the file directly
+To run a specific koan, run it with ruby:
 
-Windows is the same thing
+metaprogramming_koans$ ruby about_metaclasses.rb
 
-    c:\ruby_koans\rake                             # runs the default target :walk_the_path
-    c:\ruby_koans\ruby path_to_enlightenment.rb    # simply call the file directly
-
-=== Red, Green, Refactor
-
-In test-driven development the mantra has always been, red, green, refactor.  Write a
-failing test and run it (red), make the test pass (green), then refactor it (that is
-look at the code and see if you can make it any better.  In this case you will need
-to run the koan and see it fail (red), make the test pass (green), then take a
-moment and reflect upon the test to see what it is teaching you and improve the
-code to better communicate its intent (refactor).
-
-The very first time you run it you will see the following output:
-
-    [ ruby_koans ] $ rake
-    (in /Users/person/dev/ruby_koans)
-    cd koans
-
-    Thinking AboutAsserts
-      test_assert_truth has damaged your karma.
-
-    You have not yet reached enlightenment ...
-    <false> is not true.
-
-    Please meditate on the following code:
-    ./about_asserts.rb:10:in `test_assert_truth'
-    path_to_enlightenment.rb:27
-
-    mountains are merely mountains
-
-You have come to your first stage. If you notice it is telling you where to look for
-the first solution:
-
-    Please meditate on the following code:
-    ./about_asserts.rb:10:in `test_assert_truth'
-    path_to_enlightenment.rb:27
-
-We then open up the about_asserts.rb file and look at the first test:
-
-    # We shall contemplate truth by testing reality, via asserts.
-    def test_assert_truth
-      assert false                # This should be true
-    end
-
-We then change the +false+ to +true+ and run the test again.  After you are
-done, think about what you are learning.  In this case, ignore everything except
-the method name (+test_assert_truth+) and the parts inside the method (everything
-before the +end+).
-
-In this case the goal is for you to see that if you pass a value to the +assert+
-method, it will either ensure it is +true+ and continue on, or fail if in fact
-the statement is +false+.
+Follow the instructions and keep filling the answers to start your journey towards mastering metaprogramming in Ruby
 
 == Inspiration
 
-A special thanks to Mike Clark and Ara Howard for inspiring this
-project.  Mike Clark wrote an excellent blog post about learning Ruby
-through unit testing. This sparked an idea that has taken a bit to
-solidify, that of bringing new rubyists into the community through
-testing. Ara Howard then gave us the idea for the Koans in his ruby
-quiz entry on Meta Koans (a must for any rubyist wanting to improve
-their skills).  Also, "The Little Lisper" taught us all the value of
-the short questions/simple answers style of learning.
+The Little Schemer (http://www.amazon.com/Little-Schemer-Daniel-P-Friedman/dp/0262560992)
+by Daniel Friedman is one of my all time favorite programming books.
+It follows the socratic instruction method, which is teaching
+by way of asking progressively complex questions. You can learn the basic concepts
+of Lisp/Scheme in a few hours.
 
-Mike Clark's post ::  http://www.clarkware.com/cgi/blosxom/2005/03/18
-Meta Koans        ::  http://rubyquiz.com/quiz67.html
-The Little Lisper ::  http://www.amazon.com/Little-LISPer-Third-Daniel-Friedman/dp/0023397632
+I checked out Ruby Koans (http://rubykoans.com/) by JimWeirich and solved it completely.
+The idea of learning a new language using Test driven development has always fascinated me.
+It was very similar to the approach in Little Schemer, except that instead of a book,
+it is an automated testsuite that's asking you questions.
+
+If you're learning Ruby, you should check out the original koans first:
+http://github.com/edgecase/ruby_koans
 
 == Other Resources
 
-The Ruby Language               ::  http://ruby-lang.org
-Try Ruby in your browser        ::  http://tryruby.org
+To get more insight on the Ruby koans way of learning, check out the EdgeCase Ruby koans:
 
-Dave Thomas' introduction to Ruby Programming Ruby (the Pick Axe) ::  http://pragprog.com/titles/ruby/programming-ruby
+Following are some more resources to learn Metaprogramming in Ruby:
+# Seeing Metaclasses early (http://dannytatom.github.com/metaid/)
+# Ruby Object model and metaprogramming screencasts (http://pragprog.com/screencasts/v-dtrubyom/the-ruby-object-model-and-metaprogramming)
+# Metaprogramming Ruby (http://pragprog.com/book/ppmetr/metaprogramming-ruby)
 
-Brian Marick's fantastic guide for beginners Everyday Scripting with Ruby    ::  http://pragprog.com/titles/bmsft/everyday-scripting-with-ruby
+== How do i add my own koans?
 
-= Other stuff
+To add your own koans and contribute to the community:
+# Fork this repo
+# Copy about_template.rb to about_foo.rb
+# Add about_foo to path_to_enlightenment.rb
+# Start adding your koans as test cases
+# Make sure the solved koans work by running: ruby about_foo.rb
+# Use __ or ___ for the learner to fill
+# Create pull request
 
-Author         :: Jim Weirich <jim@weirichhouse.org>
-Author         :: Joe O'Brien <joe@edgecase.com>
-Issue Tracker  :: http://www.pivotaltracker.com/projects/48111
-Requires       :: Ruby 1.8.x or later and Rake (any recent version)
+== License
 
-= License
-
-http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png
-
-RubyKoans is released under a Creative Commons,
-Attribution-NonCommercial-ShareAlike, Version 3.0
-(http://creativecommons.org/licenses/by-nc-sa/3.0/) License.
+I'm not sure what to put here. You're free to copy, add, change or distribute the koans here.
+The structure of this whole project is derived from Edgecase Ruby koans (https://github.com/edgecase/ruby_koans)
