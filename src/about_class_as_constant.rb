@@ -48,6 +48,6 @@ class AboutClassAsConstant < EdgeCase::Koan
 
   def test_class_is_an_object_of_type_class_and_can_be_created_dynamically
     cls = Class.new
-    assert_match  /Class/, cls.to_s
+    assert_match /Class/, cls.to_s
   end
 end

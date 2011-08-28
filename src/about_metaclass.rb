@@ -106,7 +106,7 @@ BasicObject
     end
 
     assert_equal "Honk!Honk!", red_truck.honk
-    assert_raises NoMethodError do
+    assert_raises(NoMethodError) do
       blue_truck.honk
     end
   end
@@ -162,7 +162,7 @@ BasicObject
     
     assert_equal "Honk", @truck.honk
     assert_equal "Honk Honk", @truck.meta_eval { honk_honk }
-    assert_raises NoMethodError do
+    assert_raises(NoMethodError) do
       @truck.honk_honk
     end
   end
