@@ -1,17 +1,18 @@
 = Ruby Metaprogramming Koans
 
 Ruby Metaprogramming Koans walk you along the path to enlightenment in order to learn Metaprogramming in Ruby.
-It is inspired by the original Ruby koans(http://rubykoans.com) by Jim Weirich which can be forked here: https://github.com/edgecase/ruby_koans
+It is inspired by the original [Ruby koans](http://rubykoans.com) by Jim Weirich which can be forked here: https://github.com/edgecase/ruby_koans
 
 Koans teach you a programming language using Tests/TDD.
-Ruby programming attempts to teach Ruby metaprogramming using the same philosophy of koans used for programming languages.
+Metaprogramming koans attempts to teach Ruby metaprogramming using the same philosophy of koans used for programming languages.
 
 == Metaprogramming examples
 
 The metaprogramming examples used in the koans are derived from the following sources:
 
-# Seeing Metaclasses clearly by _why (http://dannytatom.github.com/metaid/)
-# Ruby Object model and Metaprogramming by Dave Thomas (http://pragprog.com/screencasts/v-dtrubyom/the-ruby-object-model-and-metaprogramming)
+1. Seeing Metaclasses clearly by _why http://dannytatom.github.com/metaid/
+2. Ruby Object model and Metaprogramming screencasts by Dave Thomas
+http://pragprog.com/screencasts/v-dtrubyom/the-ruby-object-model-and-metaprogramming
 
 The koans are a starting point and only supplement the above articles/books/videos.
 Please use the original source for more enlightenment.
@@ -29,8 +30,8 @@ have __ or ___ which you need to fill in with the correct answer to progress.
 
 The koans require Ruby 1.9.2. To install Ruby:
 
-# Install RVM (http://beginrescueend.com/rvm/install/)
-# Install Ruby (http://beginrescueend.com/rvm/install/)
+1. Install RVM http://beginrescueend.com/rvm/install/
+2. Install Ruby http://beginrescueend.com/rvm/install/
 
 $ rvm install ruby-1.9.2
 
@@ -40,51 +41,54 @@ All the koans are in Test::Unit and don't require additional gems
 
 To start working your way through the koans, run rake
 
+```
 metaprogramming_koans$ rake
+```
 
 To run a specific koan, run it with ruby:
 
+```
 metaprogramming_koans$ ruby about_metaclasses.rb
+```
 
 Follow the instructions and keep filling the answers to start your journey towards mastering metaprogramming in Ruby
 
 == Inspiration
 
-The Little Schemer (http://www.amazon.com/Little-Schemer-Daniel-P-Friedman/dp/0262560992)
+[The Little Schemer](http://www.amazon.com/Little-Schemer-Daniel-P-Friedman/dp/0262560992)
 by Daniel Friedman is one of my all time favorite programming books.
 It follows the socratic instruction method, which is teaching
 by way of asking progressively complex questions. You can learn the basic concepts
 of Lisp/Scheme in a few hours.
 
-I checked out Ruby Koans (http://rubykoans.com/) by JimWeirich and solved it completely.
-The idea of learning a new language using Test driven development has always fascinated me.
+I checked out [Ruby Koan](http://rubykoans.com/) by JimWeirich and solved it.
+The idea of learning a new language using Test driven development was fascinating.
 It was very similar to the approach in Little Schemer, except that instead of a book,
 it is an automated testsuite that's asking you questions.
 
-If you're learning Ruby, you should check out the original koans first:
-http://github.com/edgecase/ruby_koans
+If you're learning Ruby, you should check out the [original koans](http://github.com/edgecase/ruby_koans) first:
 
 == Other Resources
 
-To get more insight on the Ruby koans way of learning, check out the EdgeCase Ruby koans:
+To get more insight on the Ruby koans way of learning, check out the [EdgeCase Ruby koans](http://github.com/edgecase/ruby_koans):
 
 Following are some more resources to learn Metaprogramming in Ruby:
-# Seeing Metaclasses early (http://dannytatom.github.com/metaid/)
-# Ruby Object model and metaprogramming screencasts (http://pragprog.com/screencasts/v-dtrubyom/the-ruby-object-model-and-metaprogramming)
-# Metaprogramming Ruby (http://pragprog.com/book/ppmetr/metaprogramming-ruby)
+1. Seeing Metaclasses early http://dannytatom.github.com/metaid/
+2. Ruby Object model and metaprogramming screencasts http://pragprog.com/screencasts/v-dtrubyom/the-ruby-object-model-and-metaprogramming
+3. Metaprogramming Ruby http://pragprog.com/book/ppmetr/metaprogramming-ruby
 
 == How do i add my own koans?
 
 To add your own koans and contribute to the community:
-# Fork this repo
-# Copy about_template.rb to about_foo.rb
-# Add about_foo to path_to_enlightenment.rb
-# Start adding your koans as test cases
-# Make sure the solved koans work by running: ruby about_foo.rb
-# Use __ or ___ for the learner to fill
-# Create pull request
+1. Fork this repo
+2. Copy src/about_template.rb to src/about_foo.rb
+3. Add src/about_foo to src/path_to_enlightenment.rb
+4. Start adding your koans as test cases
+5. Make sure the solved koans work by running: ruby about_foo.rb
+6. Execute $rake gen to generate koans/about_foo.rb with all assertions replaced with __
+7. Create pull request
 
 == License
 
-I'm not sure what to put here. You're free to copy, add, change or distribute the koans here.
-The structure of this whole project is derived from Edgecase Ruby koans (https://github.com/edgecase/ruby_koans)
+You're free to copy, add, change or distribute the koans here.
+The structure of this whole project is forked from Edgecase Ruby koans (https://github.com/edgecase/ruby_koans)
