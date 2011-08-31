@@ -12,7 +12,7 @@ class AboutSingletonMethods < EdgeCase::Koan
     assert_equal __, animal.frozen?
   end
 
-  def test_singleton_method_calls_method_on_anonymous_or_ghost_or_eigen_class
+  def test_singleton_method_calls_method_on_anonymous_or_ghost_or_eigen_or_meta_class
     animal = "cat"
     def animal.speak
       "miaow"

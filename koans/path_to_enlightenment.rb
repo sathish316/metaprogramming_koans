@@ -3,6 +3,7 @@
 $LOAD_PATH << File.dirname(__FILE__)
 
 require 'about_metaclass'
+require 'about_self'
 require 'about_singleton_methods'
 require 'about_class_as_constant'
 require 'about_class_methods'
