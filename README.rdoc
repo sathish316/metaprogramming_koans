@@ -10,9 +10,13 @@ Metaprogramming koans attempts to teach Ruby metaprogramming using the same phil
 
 The metaprogramming examples used in the koans are derived from the following sources:
 
-1. Seeing Metaclasses clearly by _why http://dannytatom.github.com/metaid/
-2. Ruby Object model and Metaprogramming screencasts by Dave Thomas
+1. Seeing Metaclasses clearly by _why
+http://dannytatom.github.com/metaid/
+2. Metaprogramming in Ruby: It’s All About the Self by Yehuda Katz
+http://yehudakatz.com/2009/11/15/metaprogramming-in-ruby-its-all-about-the-self/
+3. Ruby Object model and Metaprogramming screencasts by Dave Thomas
 http://pragprog.com/screencasts/v-dtrubyom/the-ruby-object-model-and-metaprogramming
+
 
 The koans are a starting point and only supplement the above articles/books/videos.
 Please use the original source for more enlightenment.
