@@ -118,7 +118,7 @@ class AboutSelf < EdgeCase::Koan
 
   def test_methods_defined_in_Class_class_is_available_to_all_classes
     # All classes are subclasses of Class and inherit methods of Class
-    assert_match __, Person.loud_name
+    assert_match __, Person.new.loud_name
   end
 
 end
