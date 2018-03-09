@@ -73,7 +73,7 @@ If you're learning Ruby, you should check out the original koans (http://github.
 To get more insight on the Ruby koans way of learning, check out the EdgeCase Ruby koans (http://github.com/edgecase/ruby_koans):
 
 Following are some more resources to learn Metaprogramming in Ruby:
-1. Seeing Metaclasses early http://dannytatom.github.com/metaid/
+1. Seeing Metaclasses clearly http://dannytatom.github.com/metaid/
 2. Ruby Object model and metaprogramming screencasts http://pragprog.com/screencasts/v-dtrubyom/the-ruby-object-model-and-metaprogramming
 3. Metaprogramming Ruby http://pragprog.com/book/ppmetr/metaprogramming-ruby
 
